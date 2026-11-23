@@ -26,28 +26,3 @@ sequencia_defesa = [
         "tts": "KIAI!"
     }
 ]
-
-coreografia_heian_shodan = [
-    {"movimento": "Reset", "pausa": 2},
-    {"movimento": "OneStepTurnLeft", "pausa": 1},
-    {"movimento": "LeftTackle", "pausa": 1},
-    {"movimento": "OneStepForward", "pausa": 1},
-    {"movimento": "RightHitForward", "pausa": 1},
-    {"movimento": "TurnRight1", "pausa": 1},
-    {"movimento": "RightTackle", "pausa": 1},
-    {"movimento": "OneStepForward", "pausa": 1},
-    {"movimento": "LeftHitForward", "pausa": 1},
-    {"movimento": "OneStepTurnLeft", "pausa": 1},
-    {"movimento": "LeftTackle", "pausa": 1},
-    {"movimento": "OneStepForward", "pausa": 0.5},
-    {"movimento": "RightSidePunch", "pausa": 0.5},
-    {"movimento": "OneStepForward", "pausa": 0.5},
-    {"movimento": "LeftSidePunch", "pausa": 0.5},
-    {"movimento": "OneStepForward", "pausa": 0.5},
-    {"movimento": "Fight_RHit", "pausa": 1},
-    {"movimento": "TurnLeft1", "pausa": 1},
-    {"movimento": "LeftTackle", "pausa": 1},
-    {"movimento": "OneStepForward", "pausa": 1},
-    {"movimento": "RightHitForward", "pausa": 2},
-    {"movimento": "Reset", "pausa": 0}
-]
