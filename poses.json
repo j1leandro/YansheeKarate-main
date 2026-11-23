@@ -1,0 +1,40 @@
+{
+    "gedan_barai": {
+        "LeftAnkleFB": 97,
+        "LeftAnkleUD": 86,
+        "LeftElbowFlex": 93,
+        "LeftHipFB": 160,
+        "LeftHipLR": 92,
+        "LeftKneeFlex": 120,
+        "LeftShoulderFlex": 0,
+        "LeftShoulderRoll": 160,
+        "NeckLR": 90,
+        "RightAnkleFB": 131,
+        "RightAnkleUD": 90,
+        "RightElbowFlex": 180,
+        "RightHipFB": 146,
+        "RightHipLR": 87,
+        "RightKneeFlex": 138,
+        "RightShoulderFlex": 137,
+        "RightShoulderRoll": 65
+    },
+    "gedan_barai_2": {
+        "LeftAnkleFB": 62,
+        "LeftAnkleUD": 88,
+        "LeftElbowFlex": 8,
+        "LeftHipFB": 22,
+        "LeftHipLR": 92,
+        "LeftKneeFlex": 22,
+        "LeftShoulderFlex": 35,
+        "LeftShoulderRoll": 113,
+        "NeckLR": 90,
+        "RightAnkleFB": 87,
+        "RightAnkleUD": 87,
+        "RightElbowFlex": 109,
+        "RightHipFB": 22,
+        "RightHipLR": 90,
+        "RightKneeFlex": 54,
+        "RightShoulderFlex": 170,
+        "RightShoulderRoll": 0
+    }
+}
