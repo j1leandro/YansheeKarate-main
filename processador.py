@@ -19,18 +19,23 @@ def aguardar(segundos, verificar_parada=None):
     return False
 
 
-def resetar_robo():
+def resetar_robo(tela=None):
+    if tela:
+        tela.mostrar_rosto("feliz")
     YanAPI.stop_voice_tts()
     YanAPI.stop_play_motion()
     YanAPI.sync_play_motion(name="Reset")
 
 
-def executar_sequencia_poses(sequencia, poses, verificar_parada=None):
+def executar_sequencia_poses(sequencia, poses, verificar_parada=None, tela=None):
     for passo in sequencia:
         nome = passo["nome"]
         if nome not in poses:
             print("Aviso: Pose '{}' nao encontrada.".format(nome))
             continue
+
+        if tela and passo.get("rosto_inicio"):
+            tela.mostrar_rosto(passo["rosto_inicio"])
 
         destino = poses[nome]
         res_atual = YanAPI.get_servos_angles(list(destino.keys()))
@@ -41,8 +46,11 @@ def executar_sequencia_poses(sequencia, poses, verificar_parada=None):
         print("Executando {} (equilibrio)...".format(nome))
         YanAPI.set_servos_angles(pose_meio, runtime=passo["runtime_meio"])
         if aguardar(passo["runtime_meio"] / 1000.0, verificar_parada):
-            resetar_robo()
+            resetar_robo(tela)
             return False
+
+        if tela and passo.get("rosto_final"):
+            tela.mostrar_rosto(passo["rosto_final"])
 
         if passo.get("tts"):
             YanAPI.start_voice_tts(tts=passo["tts"], interrupt=True)
@@ -50,12 +58,12 @@ def executar_sequencia_poses(sequencia, poses, verificar_parada=None):
         print("Executando {} (finalizacao)...".format(nome))
         YanAPI.set_servos_angles(destino, runtime=passo["runtime_final"])
         if aguardar(passo["runtime_final"] / 1000.0, verificar_parada):
-            resetar_robo()
+            resetar_robo(tela)
             return False
 
         pausa = passo.get("pausa", 0)
         if pausa > 0 and aguardar(pausa, verificar_parada):
-            resetar_robo()
+            resetar_robo(tela)
             return False
 
     return True

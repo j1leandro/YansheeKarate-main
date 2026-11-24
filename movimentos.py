@@ -15,7 +15,9 @@ sequencia_defesa = [
         "runtime_meio": 1000,
         "runtime_final": 200,
         "pausa": 0.6,
-        "tts": None
+        "tts": None,
+        "rosto_inicio": "mal",
+        "rosto_final": None
     },
     {
         "nome": "gedan_barai_2",
@@ -23,6 +25,8 @@ sequencia_defesa = [
         "runtime_meio": 1200,
         "runtime_final": 200,
         "pausa": 0.0,
-        "tts": "KIAI!"
+        "tts": "KIAI!",
+        "rosto_inicio": "mal",
+        "rosto_final": "kiai"
     }
 ]
